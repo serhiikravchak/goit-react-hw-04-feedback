@@ -3,8 +3,6 @@ import { Box  } from 'components/common/GlobalStylex.styled';
 import { Item, List, Positive } from './FeedbackStatistics.styled';
 
 export const FeedbackStatistics =({ good,neutral,bad, total, positive })=>{
-  console.log(positive)
-  console.log(typeof positive) 
   return (
      <Box>
        <List>
@@ -25,5 +23,5 @@ FeedbackStatistics.propType = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  positive: PropTypes.number,
+  positive: PropTypes.number.isRequired,
 };
