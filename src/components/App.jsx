@@ -33,8 +33,16 @@ export const App = () => {
 
   const countTotalFeedback = () => good + neutral + bad;
 
-  const countPositiveFeedback = () =>
-    Number(((good * 100) / countTotalFeedback()).toFixed());
+  const countPositiveFeedback = () => {
+    console.log(good)
+    if (good === 0) {
+      return 0;
+       
+    } else {
+      return Number(((good * 100) / countTotalFeedback()).toFixed());
+    }
+  }
+   
 
   return (
       <Box>
